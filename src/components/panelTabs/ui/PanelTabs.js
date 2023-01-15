@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components'
 import {STYLES} from "../../../shared/constants/constants";
 import {getStaticData} from "../../../shared/static/data";
@@ -6,13 +6,28 @@ import {getStaticData} from "../../../shared/static/data";
 function PanelTabs(props) {
     const list = getStaticData.panelTab
 
-    const [activeTab, setActiveTab] = useState()
+    const [activeTab, setActiveTab] = useState('')
 
     const toggleTab = (title) => setActiveTab(title)
+
+    useEffect(() => {
+        if (!activeTab) {
+            setActiveTab('Все')
+        }
+    }, [activeTab])
 
     return (
         <Panel>
             <PanelList>
+                <ListItem
+                    onClick={() => {
+                        toggleTab("Все")
+                    }}
+
+                    active={activeTab === "Все"}
+                >
+                    Все
+                </ListItem>
                 {
                     list?.map((listItem, listIndex) => {
                         return (
@@ -38,9 +53,6 @@ const Panel = styled.div`
     height: auto;
     
     display: block;
-    
-    border-top: 1px solid ${STYLES.COLORS.GRAY};
-    border-bottom: 1px solid ${STYLES.COLORS.GRAY};
 `
 
 const PanelList = styled.ul`
@@ -50,7 +62,7 @@ const PanelList = styled.ul`
     
     overflow: auto;
     list-style: none;
-    padding: 14px 0
+    padding: 14px 0;
 `
 
 const ListItem = styled.li`
@@ -65,7 +77,7 @@ const ListItem = styled.li`
     color: ${props => props.active ? STYLES.COLORS.LIGHT : STYLES.COLORS.DARK};
     border: 1px solid  ${props => props.active ? STYLES.COLORS.DARK : STYLES.COLORS.GRAY};
     
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     padding: 6px 12px;
     

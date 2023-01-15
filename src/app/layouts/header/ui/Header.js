@@ -127,10 +127,12 @@ const FORM = styled.form`
     
     transition: opacity .3s ease-in-out
     
-    // @media (max-width: ${STYLES.MEDIA.MaxMD}px)
-    //     display: none;
-    //     opacity: 0;
-    //     visibility: hidden;
+    @media screen and (max-width: ${STYLES.MEDIA.MaxMD}px) {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+        
 `
 
 const VoiceBox = styled.div`
