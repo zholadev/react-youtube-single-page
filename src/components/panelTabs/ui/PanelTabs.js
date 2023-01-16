@@ -83,7 +83,7 @@ const ListItem = styled.li`
     
     margin-right: 12px;
     
-    transition: background-color .4s ease-in, color .6s ease-in-out;
+    transition: background-color .2s ease-in, color .2s ease-in-out;
     will-change: color, background-color
 `
 

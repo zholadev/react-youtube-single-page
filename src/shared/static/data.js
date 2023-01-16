@@ -1,3 +1,5 @@
+import {ICONS} from "../constants/constants";
+
 const panelTab = [
     {
         id: 1,
@@ -31,8 +33,75 @@ const panelTab = [
         id: 8,
         title: 'Jurassic Park',
     },
-
 ]
+
+const submenu = {
+    'main': [
+        {
+            id: 1,
+            title: 'Главная',
+            icon: ICONS.homePanelIcon
+        },
+        {
+            id: 2,
+            title: 'Shorts',
+            icon: ICONS.shortsPanelIcon
+        },
+        {
+            id: 3,
+            title: 'Подписки',
+            icon: ICONS.subscribePanelIcon
+        },
+    ],
+    'library': [
+        {
+            id: 1,
+            title: 'Библлиотека',
+            icon: ICONS.libraryPanelIcon
+        },
+        {
+            id: 2,
+            title: 'История',
+            icon: ICONS.historyPanelIcon
+        },
+        {
+            id: 3,
+            title: 'Ваши видео',
+            icon: ICONS.myVideosPanelIcon
+        },
+        {
+            id: 4,
+            title: 'Посмотреть позже',
+            icon: ICONS.laterPanelIcon
+        },
+        {
+            id: 5,
+            title: 'Понравившиеся',
+            icon: ICONS.myFavoritePanelIcon
+        },
+        {
+            id: 4,
+            title: 'Посмотреть позже',
+            icon: ICONS.laterPanelIcon
+        },
+        {
+            id: 5,
+            title: 'Понравившиеся',
+            icon: ICONS.myFavoritePanelIcon
+        },
+        {
+            id: 2,
+            title: 'История',
+            icon: ICONS.historyPanelIcon
+        },
+        {
+            id: 3,
+            title: 'Ваши видео',
+            icon: ICONS.myVideosPanelIcon
+        },
+    ]
+
+}
 
 const listVideos = [
     {
@@ -246,5 +315,6 @@ const listVideos = [
 
 export const getStaticData = {
     panelTab,
-    listVideos
+    listVideos,
+    submenu
 }

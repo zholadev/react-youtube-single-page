@@ -6,6 +6,15 @@ import Mic from '../../assets/icons/Mic.png'
 import apps from '../../assets/icons/Apps.png'
 import options from '../../assets/icons/Options.png'
 import actionUser from '../../assets/icons/action-user.png'
+import homePanelIcon from '../../assets/icons/Home.png'
+import shortsPanelIcon from '../../assets/icons/Shorts.png'
+import subscribePanelIcon from '../../assets/icons/Subscriptions.png'
+import libraryPanelIcon from '../../assets/icons/Library.png'
+import historyPanelIcon from '../../assets/icons/History.png'
+import myVideosPanelIcon from '../../assets/icons/Yourvideos.png'
+import laterPanelIcon from '../../assets/icons/Watchlater.png'
+import myFavoritePanelIcon from '../../assets/icons/Mylikes.png'
+import arrowBottom from '../../assets/icons/arrow-bottom.png'
 
 export const ICONS = {
     logo,
@@ -15,7 +24,16 @@ export const ICONS = {
     Mic,
     apps,
     options,
-    actionUser
+    actionUser,
+    homePanelIcon,
+    shortsPanelIcon,
+    subscribePanelIcon,
+    libraryPanelIcon,
+    historyPanelIcon,
+    myVideosPanelIcon,
+    laterPanelIcon,
+    myFavoritePanelIcon,
+    arrowBottom
 }
 
 export const STYLES = {
@@ -25,7 +43,8 @@ export const STYLES = {
         BTN_OUTLINE: '#C6C6C6',
         CONNECTION: '#065FD4',
         DARK: '#333333',
-        LIGHT: '#FFFFFF'
+        LIGHT: '#FFFFFF',
+        RGB_GRAY: 'rgba(0, 0, 0, .1)'
     },
 
     BTN: `
